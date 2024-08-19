@@ -8,10 +8,40 @@ function Book(author, title, pages, read) {
 }
 
 function addBook(author, title, pages, read) {
-  myLibrary.unshift(new Book(author, title, pages, read));
+  myLibrary.unshift(new Book(title, author, pages, read));
 }
 
 addBook("Dune", "Frank Hubert", 600, true);
 addBook("Dune2", "Frank Hubert2", 6002, true);
 addBook("Dune3", "Frank Hubert3", 6003, true);
 console.log(myLibrary);
+
+
+const dialog = document.querySelector("dialog");
+const addBookBut = document.querySelector(".add");
+const main = document.querySelector("main");
+
+//cards
+printCards();
+
+
+function printCards(){
+    myLibrary.forEach((book, index)=>{
+        var cardHTML = `<div>
+            <div class="details">
+                <p class="title">${book.title}</p>
+                <p class="author">by ${book.author}</p>
+                <p class="pages">${book.pages} pages</p>
+            </div>
+            <div class="buttons">
+                <button class="read ${book.read}"> Read</button>
+                <button class="remove">Remove</button>
+            </div> 
+        </div>`;
+        main.insertAdjacentHTML("beforeend", cardHTML);
+    })
+}
+
+
+//dialog
+addBookBut.addEventListener("click", () => dialog.showModal());
