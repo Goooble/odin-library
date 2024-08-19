@@ -21,8 +21,8 @@
                 <p class="pages">600 pages</p>
             </div>
             <div class="buttons">
-                <div class="read"> Read</div>
-                <div class="remove">Remove</div>
+                <button class="read"> Read</button>
+                <button class="remove">Remove</button>
             </div>
             
         </div>
@@ -33,17 +33,18 @@
                 <p class="pages">600 pages</p>
             </div>
             <div class="buttons">
-                <div class="read"> Read</div>
-                <div class="remove">Remove</div>
+                <button class="read"> Read</button>
+                <button class="remove">Remove</button>
             </div>
             
         </div>
         <dialog open>
             <form action="" id="add-book" method="dialog">
                 <div class="enter">
-                    <div><label for="title">Title:</label><input value="Dune" autofocus id="title" type="text"></div>
-                    <div><label for="author">Author:</label><input value="Frank Hubert" id="author" type="text"></div>
-                    <div><label for="pages">Number of pages:</label><input value="600" id="pages" type="number"></div>
+                    <div><label for="title">Title:</label><input class="input-box" value="Dune" autofocus id="title" type="text"></div>
+                    <div><label for="author">Author:</label><input class="input-box"  value="Frank Hubert" id="author" type="text"></div>
+                    <div><label for="pages">Number of pages:</label><input class="input-box"  value="600" id="pages" type="number"></div>
+                    <div><label for="read-box">Have you read the book?</label><input type="checkbox" name="read-status" value="read" id="read-box"></div>
                 </div>
                 <div class="dia-buttons">
                     <button>Cancel</button>
