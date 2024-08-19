@@ -101,8 +101,20 @@ main .pages {
 }
 
 .read{
+    background-color: tomato;
+    color: white;
+}
+.read::before{
+    content:"Not";
+}
+
+.read-status{
     background-color: #519872;
     color: white;
+}
+
+.read-status::before{
+    content:"";
 }
 
 /* .read{
