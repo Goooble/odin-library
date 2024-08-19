@@ -38,7 +38,19 @@
             </div>
             
         </div>
-
+        <dialog open>
+            <form action="" id="add-book" method="dialog">
+                <div class="enter">
+                    <div><label for="title">Title:</label><input value="Dune" autofocus id="title" type="text"></div>
+                    <div><label for="author">Author:</label><input value="Frank Hubert" id="author" type="text"></div>
+                    <div><label for="pages">Number of pages:</label><input value="600" id="pages" type="number"></div>
+                </div>
+                <div class="dia-buttons">
+                    <button>Cancel</button>
+                    <button type="submit" form="add-book">Submit</button>
+                </div>
+            </form>
+        </dialog>
     </main>
 </body>
 </html>
