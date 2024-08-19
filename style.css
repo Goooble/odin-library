@@ -12,12 +12,14 @@ header{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 5rem;
     color: #160C28;
     margin-bottom: 20px;
     border-bottom: 4px solid #FE4A49;
     border-radius: 10px;
     padding: 5px;
+    letter-spacing: 0.5rem;
+    font-family:fantasy;
 }
 
 .add {
@@ -43,9 +45,71 @@ main{
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 0.2fr));
+    gap:20px;
 }
 
 main>div{
     background-color: aliceblue;
-    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 2px solid tomato;
+    border-right: 2px solid tomato;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    gap: 30px;
 }
+
+main>div:hover{
+    box-shadow: 2px 2px 5px 0px #160C28;
+}
+
+.details{
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+.title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 1px solid tomato;
+}
+
+.author{
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+main .pages {
+    font-size:1rem;
+    color: rgb(36, 36, 36)
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons div{
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+.read{
+    background-color: #519872;
+    color: white;
+}
+
+/* .remove{
+    background-color: tomato;
+    color: white;
+} */
+
+.remove{
+    background-color: antiquewhite;
+    border: 1px solid tomato;
+}
+
