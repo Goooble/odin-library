@@ -39,7 +39,6 @@ function printCards() {
   //to update the cards in dom
   cardList = document.querySelectorAll("main>div");
   cardList.forEach((card) => {
-    console.log("called");
     card.addEventListener("mouseover", (e)=>{
       e.currentTarget.querySelector(".remove").classList.toggle("remove-hide");
     })
@@ -99,9 +98,11 @@ dialog.returnValue = null;
 addBookBut.addEventListener("click", () => dialog.showModal());
 
 dialog.addEventListener("close", () => {
+  console.log(dialog.returnValue);
   if (dialog.returnValue === "submit") {
     addBook(inTitle.value, inAuthor.value, inPages.value, inRead.checked);
     updateCards();
+    dialog.returnValue = null;
   }
   inTitle.value = "";
   inAuthor.value = "";
