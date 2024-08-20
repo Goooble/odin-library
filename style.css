@@ -65,6 +65,7 @@ main>div{
 
 main>div:hover{
     box-shadow: none;
+    border: 2px solid #160C28;
 }
 
 .details{
