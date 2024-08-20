@@ -29,6 +29,7 @@ h1{
     color: white;
     border: none;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 button:hover{
@@ -100,20 +101,20 @@ main .pages {
     border: none;
 }
 
-.read{
+button.read-false{
     background-color: tomato;
     color: white;
 }
-.read::before{
+button.read-false::before{
     content:"Not";
 }
 
-.read-status{
+.read{
     background-color: #519872;
     color: white;
 }
 
-.read-status::before{
+.read::before{
     content:"";
 }
 
