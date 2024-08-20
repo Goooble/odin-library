@@ -23,7 +23,7 @@ function printCards() {
   myLibrary.forEach((book, index) => {
     var readingStatus;
     book.read ? (readingStatus = "read-true") : (readingStatus = "read-false");
-    var cardHTML = `<div class="card${index}" >
+    var cardHTML = `<div class="card${index} card" >
             <div class="details">
                 <p class="title">${book.title}</p>
                 <p class="author">by ${book.author}</p>
@@ -38,6 +38,15 @@ function printCards() {
   });
   //to update the cards in dom
   cardList = document.querySelectorAll("main>div");
+  cardList.forEach((card) => {
+    console.log("called");
+    card.addEventListener("mouseover", (e)=>{
+      e.currentTarget.querySelector(".remove").classList.toggle("remove-hide");
+    })
+    card.addEventListener("mouseout", (e)=>{
+      e.currentTarget.querySelector(".remove").classList.toggle("remove-hide");
+    })
+  })
 
 }
 function updateCards() {
@@ -46,7 +55,7 @@ function updateCards() {
   });
   printCards();
 }
-
+//remove
 main.addEventListener("click", (e) => {
   if (e.target.classList.contains("remove")) {
     var index = getIndex(e.target);
@@ -54,6 +63,10 @@ main.addEventListener("click", (e) => {
     updateCards();
   }
 });
+// main.addEventListener("mouseover", (e) => {
+//   console.log(e.composedPath());
+// })
+
 
 //read status toggling
 main.addEventListener("click", (e) => {
@@ -66,7 +79,6 @@ main.addEventListener("click", (e) => {
     }
     
   }
-  console.log(myLibrary)
 });
 
 function getIndex(removeBut) {
