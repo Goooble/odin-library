@@ -1,12 +1,13 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+  }
 }
-
 function addBook(title, author, pages, read) {
   myLibrary.unshift(new Book(title, author, pages, read));
 }
@@ -39,14 +40,13 @@ function printCards() {
   //to update the cards in dom
   cardList = document.querySelectorAll("main>div");
   cardList.forEach((card) => {
-    card.addEventListener("mouseover", (e)=>{
+    card.addEventListener("mouseover", (e) => {
       e.currentTarget.querySelector(".remove").classList.toggle("remove-hide");
-    })
-    card.addEventListener("mouseout", (e)=>{
+    });
+    card.addEventListener("mouseout", (e) => {
       e.currentTarget.querySelector(".remove").classList.toggle("remove-hide");
-    })
-  })
-
+    });
+  });
 }
 function updateCards() {
   cardList.forEach((e) => {
@@ -66,7 +66,6 @@ main.addEventListener("click", (e) => {
 //   console.log(e.composedPath());
 // })
 
-
 //read status toggling
 main.addEventListener("click", (e) => {
   if (e.target.classList.contains("read")) {
@@ -76,7 +75,6 @@ main.addEventListener("click", (e) => {
     } else {
       myLibrary[getIndex(e.target.nextElementSibling)].read = true;
     }
-    
   }
 });
 
