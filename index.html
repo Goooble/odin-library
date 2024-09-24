@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Library</h1>
-        <button class="add">Add book</button>
+      <h1>Library</h1>
+      <button class="add">Add book</button>
     </header>
     <main>
-        <dialog>
-            <form action="" id="add-book" method="dialog">
-                <div class="enter">
-                    <div><label for="title">Title:</label><input class="input-box" placeholder="Dune" autofocus id="title" type="text"></div>
-                    <div><label for="author">Author:</label><input class="input-box"  placeholder="Frank Herbert" id="author" type="text"></div>
-                    <div><label for="pages">Number of pages:</label><input class="input-box"  placeholder="600" id="pages" type="number"></div>
-                    <div><label for="read-box">Have you read the book?</label><input checked type="checkbox" name="read-status" value="read" id="read-box"></div>
-                </div>
-                <div class="dia-buttons">
-                    <button value="cancel">Cancel</button>
-                    <button type="submit" form="add-book" formmethod="dialog" value="submit">Submit</button>
-                </div>
-            </form>
-        </dialog>
+      <dialog>
+        <form action="" id="add-book" method="dialog">
+          <div class="enter">
+            <div>
+              <label for="title">Title:</label
+              ><input
+                class="input-box"
+                placeholder="Dune"
+                autofocus
+                id="title"
+                type="text"
+                required
+              />
+            </div>
+            <div>
+              <label for="author">Author:</label
+              ><input
+                class="input-box"
+                placeholder="Frank Herbert"
+                id="author"
+                type="text"
+                required
+              />
+            </div>
+            <div>
+              <label for="pages">Number of pages:</label
+              ><input
+                class="input-box"
+                placeholder="600"
+                id="pages"
+                type="number"
+                required
+              />
+            </div>
+            <div>
+              <label for="read-box">Have you read the book?</label
+              ><input
+                checked
+                type="checkbox"
+                name="read-status"
+                value="read"
+                id="read-box"
+              />
+            </div>
+          </div>
+          <div class="dia-buttons">
+            <button value="cancel">Cancel</button>
+            <button
+              type="submit"
+              form="add-book"
+              formmethod="dialog"
+              value="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </dialog>
     </main>
-</body>
+  </body>
 </html>
